@@ -1,1 +1,0 @@
-Just getting started with a small web portfolio
