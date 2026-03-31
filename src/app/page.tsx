@@ -1,11 +1,20 @@
 export default function Home() {
     return (
-        <main className="max-w-2xl mx-auto px-6 py-24">
-            <h1 className="text-3xl font-semibold">Tim</h1>
+        <>
+            <div className="flex flex-1 flex-col">
+                <div className="flex-1 overflow-y-auto">
+                    <div className="text-primary mx-auto flex max-w-2xl flex-1 flex-col gap-8 py-16 leading-[1.6] sm:py-32">
 
-            <p className="mt-4 text-gray-600">
-                I build things and explore data.
-            </p>
-        </main>
+                        <h1 className="text-2xl font-semibold">
+                            Tim
+                        </h1>
+
+                        <p className="text-secondary text-2xl font-semibold text-pretty">
+                            Trying to learn and build cool things. Currently working on this portfolio.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }
