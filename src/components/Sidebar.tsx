@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Section } from "./Section";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 interface SidebarProps {
@@ -18,7 +19,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
             >
                 <div className="p-6 pt-20 flex flex-col gap-6">
 
-                    <section className="flex flex-col gap-2 px-4">
+                    <Section>
                         <Link
                             href="/"
                             onClick={() => setOpen(false)}
@@ -31,9 +32,9 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                             className="text-2xl font-semibold text-pretty text-quarternary hover:text-primary transition">
                             About
                         </Link>
-                    </section>
+                    </Section>
 
-                    <section className="flex flex-row gap-2 px-4">
+                    <Section className="flex-row">
                         <Link
                             href="https://www.instagram.com/timlpb_/"
                             target="_blank"
@@ -66,7 +67,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                                 className="text-quarternary group-hover:text-primary select-none"
                             />
                         </Link>
-                    </section>
+                    </Section>
                 </div>
             </div>
 

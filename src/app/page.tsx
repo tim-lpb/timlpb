@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import {Section} from "@/components/Section";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
             <div className="flex flex-1 flex-col">
                 <div className="flex-1 overflow-y-auto">
                     <div className="text-primary mx-auto flex max-w-2xl flex-1 flex-col gap-16 py-16 leading-[1.6] sm:py-32">
-                        <section className="flex flex-col gap-2 px-4">
+                        <Section className="gap-2">
                             <div className="flex gap-6 items-center">
                                 <div className="flex-shrink-0">
                                     <Image
@@ -30,9 +31,9 @@ export default function Home() {
                             <p className="text-secondary text-2xl font-semibold text-pretty">
                                 I&apos;m trying to learn and build cool things. Currently working on this portfolio.
                             </p>
-                        </section>
+                        </Section>
 
-                        <section className="flex flex-row gap-2 px-4">
+                        <Section className="flex-row gap-2">
                             <Link
                                 href="https://www.instagram.com/timlpb_/"
                                 target="_blank"
@@ -65,7 +66,7 @@ export default function Home() {
                                     className="text-quarternary group-hover:text-primary select-none"
                                 />
                             </Link>
-                        </section>
+                        </Section>
                     </div>
                 </div>
             </div>

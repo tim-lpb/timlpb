@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Section } from "./Section";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
 
@@ -23,7 +24,7 @@ export default function Header() {
                     {sidebarOpen ? <FaTimes size={24}/> : <FaBars size={24}/>}
                 </button>
 
-                <section className="flex flex-row gap-2 px-4">
+                <Section className="gap-2">
                     {pageName && (
                         <div className="text-sm text-secondary">
                             <Link
@@ -43,7 +44,7 @@ export default function Header() {
                             </Link>
                         </div>
                     )}
-                </section>
+                </Section>
             </header>
 
             <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
