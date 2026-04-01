@@ -22,7 +22,7 @@ export default function Home() {
                                     />
                                 </div>
 
-                                <h1 className="text-2xl font-semibold text-pretty sm:text-5xl mb-8">
+                                <h1 className="text-5xl font-semibold text-pretty sm:text-5xl mb-8">
                                     Hi, I&apos;m Tim!
                                 </h1>
                             </div>
