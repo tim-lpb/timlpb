@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Section } from "./Section";
+import {Section} from "@/components/ComponentsList";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
 
@@ -29,7 +29,7 @@ export default function Header() {
                         <div className="text-sm text-secondary">
                             <Link
                                 href="/"
-                                className="text-tertiary text-xl font-medium hover:text-secondary"
+                                className="text-secondary text-xl font-medium hover:text-primary"
                             >
                                 timlpb
                             </Link>
@@ -38,7 +38,7 @@ export default function Header() {
 
                             <Link
                                 href={`/${pageName}`}
-                                className="text-tertiary text-xl font-medium hover:text-secondary"
+                                className="text-secondary text-xl font-medium hover:text-primary"
                             >
                                 {pageName}
                             </Link>

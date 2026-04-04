@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Section } from "./Section";
+import {Section} from "@/components/ComponentsList";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 interface SidebarProps {
@@ -38,6 +38,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                         <Link
                             href="https://www.instagram.com/timlpb_/"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="group -ml-1 p-2 inline-flex items-center"
                         >
                             <FaInstagram
@@ -49,6 +50,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                         <Link
                             href="https://www.linkedin.com/in/timlpb/"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="group -ml-1 p-2 inline-flex items-center"
                         >
                             <FaLinkedin
@@ -60,6 +62,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
                         <Link
                             href="https://github.com/tim-lpb"
                             target="_blank"
+                            rel="noopener noreferrer"
                             className="group -ml-1 p-2 inline-flex items-center"
                         >
                             <FaGithub
