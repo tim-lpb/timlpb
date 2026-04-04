@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
-import {Section} from "@/components/ComponentsList";
+import {cn, Section} from "@/components/ComponentsList";
 import Sidebar from "./Sidebar";
 import Link from "next/link";
 
@@ -47,6 +47,10 @@ export default function Header() {
 
     const showHeader = !hidden || hoverReveal || sidebarOpen;
 
+    const scrollTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     return (
         <>
             <div
@@ -57,10 +61,11 @@ export default function Header() {
             <header
                 onMouseEnter={() => setHoverReveal(true)}
                 onMouseLeave={() => setHoverReveal(false)}
-                className={[
+                className={cn(
                     "sticky top-0 z-50 w-full bg-white px-6 py-1 transition-transform duration-300",
-                    showHeader ? "translate-y-0" : "-translate-y-full"
-                ].join(" ")}
+                    showHeader ? "translate-y-0" : "-translate-y-full",
+                    sidebarOpen && "bg-transparent"
+                )}
             >
 
                 <div className="flex items-center gap-2">
@@ -83,12 +88,12 @@ export default function Header() {
 
                                 <span className="mx-1 text-xl font-medium">/</span>
 
-                                <Link
-                                    href={`/${pageName}`}
+                                <button
+                                    onClick={scrollTop}
                                     className="text-secondary text-xl font-medium hover:text-primary"
                                 >
                                     {pageName}
-                                </Link>
+                                </button>
                             </div>
                         )}
                     </Section>

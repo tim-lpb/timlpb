@@ -76,7 +76,7 @@ export default function Sidebar({ open, setOpen }: SidebarProps) {
 
             {open && (
                 <div
-                    className="fixed inset-0 bg-black/20 z-30"
+                    className="fixed inset-0 backdrop-blur-sm z-30"
                     onClick={() => setOpen(false)}
                 />
             )}
