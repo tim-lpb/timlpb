@@ -29,3 +29,17 @@ export function InlineLink({ href, children }: PropsWithChildren<{ href: string 
         </Link>
     );
 }
+
+export function ProjectElement({href, children}: PropsWithChildren<{ href: string }>) {
+    return (
+        <Link
+            href={href}
+            className="group h-40 rounded-xl border border-zinc-300 bg-white/70 p-3 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-[1.02] hover:shadown-md">
+            <Section className="h-full justify-between gap-2 px-0">
+                {children}
+            </Section>
+        </Link>
+    )
+}
+
+{/* TODO: Add ore components, e.g. projects block */}

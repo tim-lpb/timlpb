@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+{/* TODO: Add metadata to every page for different names */}
 export const metadata: Metadata = {
   title: "tim-lpb",
   description: "Portfolio website for Tim Bernards",

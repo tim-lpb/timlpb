@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import {Section, InlineLink} from "@/components/ComponentsList";
+import {Section, InlineLink, ProjectElement} from "@/components/ComponentsList";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
 
 export default function Home() {
@@ -14,24 +14,34 @@ export default function Home() {
                             My Projects
                         </h1>
 
-                        // TODO: Make this look clean, add Projects card component and add real projects including pictures and description
-                        // TODO: Big site for projects with stack, description, links to github and live demo, maybe even a blog post about the project
+                        {/* TODO: Make this look clean, add Projects card component and add real projects including pictures and description */}
+                        {/* TODO: Big site for projects with stack, description, links to github and live demo, maybe even a blog post about the project */}
 
-                        <Section className="gap-4">
-                            <div className="mx-auto w-full max-w-xl">
-                                <article className="flex border rounded-xl p-4 h-48 shadow-md">
-                                    <a>
-                                        Hi
-                                    </a>
-                                </article>
-                            </div>
+                        <Section className="gap-4 px-0">
+                            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                                <ProjectElement href="/projects/prism">
+                                    <Section className="h-full justify-between gap-2 px-0">
+                                        <h2 className="text-lg font-semibold text-pretty">
+                                            Project 1
+                                        </h2>
 
-                            <div className="mx-auto w-full max-w-xl">
-                                <article className="flex border rounded-xl p-4">
-                                    <a>
-                                        Hi
-                                    </a>
-                                </article>
+                                        <p className="text-secondary text-sm font-normal text-pretty wrap-break-word hyphens-auto">
+                                            This is a description of project 1.
+                                        </p>
+                                    </Section>
+                                </ProjectElement>
+
+                                <ProjectElement href="/projects/">
+                                    <Section className="h-full justify-between gap-2 px-0">
+                                        <h2 className="text-lg font-semibold text-pretty">
+                                            Project 2
+                                        </h2>
+
+                                        <p className="text-secondary text-sm font-normal text-pretty wrap-break-word hyphens-auto">
+                                            This is a description of project 2.
+                                        </p>
+                                    </Section>
+                                </ProjectElement>
                             </div>
                         </Section>
                         <p className="text-secondary text-xl font-normal text-pretty wrap-break-word hyphens-auto">
