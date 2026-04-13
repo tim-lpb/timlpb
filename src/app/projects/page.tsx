@@ -14,8 +14,6 @@ export default function Home() {
                             My Projects
                         </h1>
 
-                        // TODO: Make this look clean, add Projects card component and add real projects including pictures and description
-                        // TODO: Big site for projects with stack, description, links to github and live demo, maybe even a blog post about the project
                         <Section className="gap-4">
                             <div className="mx-auto w-full max-w-xl">
                                 <article className="flex border rounded-xl p-4 h-48">

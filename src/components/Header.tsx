@@ -14,7 +14,7 @@ export default function Header() {
 
     const pathname = usePathname();
     const lastY = useRef(0);
-    const pageName = pathname === "/" ? null : pathname.substring(1);
+    const pageName = pathname === "/" ? null : pathname.substring(1).split("/")[0];
 
     useEffect(() => {
         const threshold = 80; // Minimum scroll distance to trigger hide/show
@@ -76,7 +76,6 @@ export default function Header() {
                         {sidebarOpen ? <FaTimes size={24}/> : <FaBars size={24}/>}
                     </button>
 
-                    //TODO: Only show first entry of the path, e.g. for /projects/abc show only projects
                     <Section className="gap-2">
                         {pageName && (
                             <div className="text-sm text-secondary">
