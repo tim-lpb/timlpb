@@ -1,8 +1,14 @@
+import {Metadata} from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 import {Section, InlineLink} from "@/components/ComponentsList";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
+
+export const metadata: Metadata = {
+    title: "About me",
+    description: "Hi, I&apos;m Tim. I&apos;m currently studying Biology and Computer Science at University of Bonn.",
+};
 
 export default function Home() {
     return (

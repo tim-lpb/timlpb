@@ -1,8 +1,14 @@
+import {Metadata} from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 import {Section, InlineLink, ProjectElement} from "@/components/ComponentsList";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa";
+
+export const metadata: Metadata = {
+    title: "Projects",
+    description: "Here I display some of the projects I worked on. I am always open to new opportunities and collaborations, so feel free to reach out if you want to connect or work on a project together!",
+};
 
 export default function Home() {
     return (

@@ -13,10 +13,34 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-{/* TODO: Add metadata to every page for different names */}
 export const metadata: Metadata = {
-  title: "tim-lpb",
-  description: "Portfolio website for Tim Bernards",
+  metadataBase: new URL("https://timlpb.com"),
+  title: {
+    default: "timlpb",
+    template: "%s | timlpb",
+  },
+  description: "Software engineer and researcher with a passion for learning new things. Currently studying Biology at University of Bonn.",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  authors: [
+    {
+      name: "Tim Bernards",
+      url: "https://github.com/tim-lpb",
+    },],
+  openGraph: {
+    type: "website",
+    siteName: "timlpb",
+    url: "/",
+  }
 };
 
 export default function RootLayout({
