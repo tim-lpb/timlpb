@@ -52,11 +52,10 @@ export function ProjectCard({
         <Link
             href={href}
             className={cn(
-                "group mx-auto block w-full max-w-[42rem] overflow-hidden rounded-2xl border border-zinc-300/80 bg-white/80 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg",
+                "group mx-auto block w-full max-w-2xl overflow-hidden rounded-2xl border border-zinc-300/80 bg-white/80 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-lg",
                 className
             )}
         >
-            {/* 16:9 Preview */}
             <div className="relative aspect-video w-full overflow-hidden bg-zinc-100">
                 <Image
                     src={imageSrc}
@@ -67,7 +66,6 @@ export function ProjectCard({
                 />
             </div>
 
-            {/* Unterer Balken für Titel + Kurzbeschreibung */}
             <div className="border-t border-zinc-300/70 bg-white/90 px-5 py-4 backdrop-blur-sm">
                 <h3 className="text-primary text-lg font-semibold text-pretty">{title}</h3>
                 <p className="text-secondary mt-1 text-sm leading-relaxed text-pretty">{description}</p>
@@ -77,4 +75,4 @@ export function ProjectCard({
 }
 
 
-{/* TODO: Add ore components, e.g. projects block */}
+{/* TODO: Add more components, e.g. projects block */}

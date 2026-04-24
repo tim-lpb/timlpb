@@ -19,20 +19,21 @@ export default function Home() {
                         </h1>
 
                         <p className="text-secondary text-l font-normal text-pretty wrap-break-word hyphens-auto">
-                            I am constantly working on new projects and updating existing ones. Here is a
-                            selection on some of the projects I worked or am currently working on.
-                            Feel free to ask me when you want to know more about a project!
+                            I am constantly working on new projects and updating existing ones.
+                            Here is a selection of some of the projects I have worked on or am currently working on.
+                            Feel free to reach out if you&apos;d like to learn more about any of them!
                         </p>
                         </Section>
 
                         <Section className="gap-8">
 
                             {/* TODO: Big site for projects with stack, description, links to github and live demo, maybe even a blog post about the project */}
+                            {/* TODO: Put in external files for CMS readiness later and clearer structure*/}
 
                             <ProjectCard
                                 href="/projects/portfolio"
                                 title="Portfolio Website"
-                                description="Built with Next.js and Tailwind CSS."
+                                description="Portfolio you are currently on! A project to show my skills and passions"
                                 imageSrc="/img/timlpb.jpeg"
                                 imageAlt="Preview of Portfolio Website"
                             />
